@@ -9,13 +9,13 @@ body {
 .app {
   display: none;
   .meta_container {
-    position: absolute;
-    left: 30px;
-    top: 30px;
-    padding: 10px;
-    background-color: #fff;
-    width: 200px;
+    background-color: rgba(255, 255, 255, 0.85);
     font-family: Roboto;
+    left: 30px;
+    padding: 10px;
+    position: absolute;
+    top: 30px;
+    width: 200px;
     h3 {
       font-size: 24px;
       margin-bottom: 10px;
@@ -33,14 +33,21 @@ body {
       font-weight: 500;
     }
   }
-  .background_container {
-    width: 100vw;
-    height: 100vh;
+  .chart_container {
+    // background-color: rgba(255, 255, 255, 1);
+    bottom: 10px;
+    height: 300px;
+    left: 10px;
+    position: absolute;
+    width: 600px;
+  }
 
-      /* Center and scale the image nicely */
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+  .background_container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
   }
 }
 
