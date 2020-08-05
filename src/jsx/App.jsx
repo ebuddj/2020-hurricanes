@@ -60,7 +60,7 @@ class App extends Component {
       };
       data.map((values, i) => {
         backgrounds.push(path_prefix + 'img/1600px-' + values.year + '_Atlantic_hurricane_season_summary_map-min.png');
-        if (values.year === '1990' || values.year === '2000' || values.year === '2010' || values.year === '2019') {
+        if (values.year === '1990' || values.year === '1995' || values.year === '2000' || values.year === '2005' || values.year === '2010' || values.year === '2015' || values.year === '2019') {
           bar_chart_data.labels.push(values.year);
         }
         else {
