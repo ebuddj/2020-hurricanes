@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500.css);
 html,
 body {
-  margin: 0;
   height: 100%;
+  margin: 0;
   padding: 0;
 }
 .app___2khK2 {
@@ -11,27 +11,39 @@ body {
 .app___2khK2 .meta_container___3p0xG {
   background-color: rgba(255, 255, 255, 0.85);
   font-family: Roboto;
-  left: 30px;
-  padding: 10px;
+  left: 15px;
+  padding: 0 15px;
   position: absolute;
-  top: 30px;
-  width: 200px;
+  top: 15px;
+  width: 170px;
 }
-.app___2khK2 .meta_container___3p0xG h3 {
+.app___2khK2 .meta_container___3p0xG .meta_wrapper___3VYjO {
+  margin: 15px 0;
+}
+.app___2khK2 .meta_container___3p0xG .meta_wrapper___3VYjO h3 {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
 }
-.app___2khK2 .meta_container___3p0xG .label___2-olX {
-  text-transform: uppercase;
+.app___2khK2 .meta_container___3p0xG .meta_wrapper___3VYjO .label___2-olX {
   font-size: 12px;
   margin-bottom: 3px;
-  display: block;
+  text-transform: uppercase;
 }
-.app___2khK2 .meta_container___3p0xG .value___2L5q8 {
-  font-size: 18px;
-  display: block;
+.app___2khK2 .meta_container___3p0xG .meta_wrapper___3VYjO .value_container___3NA6i {
   margin-bottom: 10px;
+}
+.app___2khK2 .meta_container___3p0xG .meta_wrapper___3VYjO .value_container___3NA6i .value___2L5q8 {
+  display: inline-block;
+  font-size: 18px;
   font-weight: 500;
+  vertical-align: middle;
+}
+.app___2khK2 .meta_container___3p0xG .meta_wrapper___3VYjO .value_container___3NA6i .indicator___2VljI {
+  display: inline-block;
+  height: 15px;
+  margin-right: 5px;
+  vertical-align: middle;
+  width: 15px;
 }
 .app___2khK2 .chart_container___3Jzlm {
   bottom: 10px;
