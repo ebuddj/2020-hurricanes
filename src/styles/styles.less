@@ -11,26 +11,38 @@ body {
   .meta_container {
     background-color: rgba(255, 255, 255, 0.85);
     font-family: Roboto;
-    left: 30px;
-    padding: 10px;
+    left: 15px;
+    padding: 0 15px;
     position: absolute;
-    top: 30px;
-    width: 200px;
-    h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-    .label {
-      text-transform: uppercase;
-      font-size: 12px;
-      margin-bottom: 3px;
-      display: block;
-    }
-    .value {
-      font-size: 18px;
-      display: block;
-      margin-bottom: 10px;
-      font-weight: 500;
+    top: 15px;
+    width: 170px;
+    .meta_wrapper {
+      margin: 15px 0;
+      h3 {
+        font-size: 24px;
+        margin: 0 0 10px 0;
+      }
+      .label {
+        text-transform: uppercase;
+        font-size: 12px;
+        margin-bottom: 3px;
+      }
+      .value_container {
+        margin-bottom: 10px;
+        .value {
+          font-size: 18px;
+          display: inline-block;
+          font-weight: 500;
+          vertical-align: middle;
+        }
+        .indicator {
+          vertical-align: middle;
+          display: inline-block;
+          height: 15px;
+          margin-right: 5px;
+          width: 15px;
+        }
+      }
     }
   }
   .chart_container {
@@ -42,13 +54,13 @@ body {
     width: 600px;
   }
 
-    .background_container {
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      height: 100vh;
-      width: 100vw;
-    }
+  .background_container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+  }
 }
 
 @import 'basics.less';

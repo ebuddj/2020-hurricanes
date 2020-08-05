@@ -95,6 +95,9 @@ class App extends Component {
           display:false
         },
         onClick:this.handleClick.bind(this),
+        onHover:(event, chartElement) => {
+          event.target.style.cursor = chartElement[0] ? 'pointer' : 'default';
+        },
         scales:{
           xAxes: [{
             display:true,
@@ -131,8 +134,6 @@ class App extends Component {
     clearInterval(interval);
     let active_element = chart.getElementAtEvent(evt)[0];
     if (active_element) {
-      console.log(active_element._index)
-      console.log(this.state.data)
       this.changeData(active_element._index, this.state.data[active_element._index])
     }
   }
@@ -164,7 +165,6 @@ class App extends Component {
     chart.data.datasets[2].backgroundColor = chart.data.datasets[2].backgroundColor.map((background) => {
       return 'rgba(254, 91, 89, 0.45)';
     });
-    console.log(chart.data.datasets[2].backgroundColor)
     chart.data.datasets[0].backgroundColor[i] = 'rgba(0, 247, 243, 1)';
     chart.data.datasets[1].backgroundColor[i] = 'rgba(254, 142, 0, 1)';
     chart.data.datasets[2].backgroundColor[i] = 'rgba(254, 91, 89, 1)';
@@ -179,13 +179,45 @@ class App extends Component {
     return (
       <div className={style.app} ref={this.appRef}>
         <div className={style.meta_container}>
-          <h3>{this.state.current_data.year}</h3>
-          <div><span className={style.label}>Total deaths</span> <span className={style.value}>{this.state.current_data.deaths}</span></div>
-          <div><span className={style.label}>Strongest storm</span> <span className={style.value}>{this.state.current_data.strongest_storm}</span></div>
-          <h3>Number of</h3>
-          <div><span className={style.label}>Tropical cyclones</span> <span className={style.value}>{this.state.current_data.cyclones}</span></div>
-          <div><span className={style.label}>Tropical storms</span> <span className={style.value}>{this.state.current_data.storms}</span></div>
-          <div><span className={style.label}>Hurricanes</span> <span className={style.value}>{parseInt(this.state.current_data.hurricanes) + parseInt(this.state.current_data.major_hurricanes)}</span></div>
+          <div className={style.meta_wrapper}>
+            <h3>Year {this.state.current_data.year}</h3>
+            <div>
+              <div className={style.label}>Total deaths</div>
+              <div className={style.value_container}>
+                <span className={style.value}>{this.state.current_data.deaths}</span>
+              </div>
+            </div>
+            <div>
+              <div className={style.label}>Strongest storm</div>
+              <div className={style.value_container}>
+                <span className={style.value}>{this.state.current_data.strongest_storm}</span>
+              </div>
+            </div>
+          </div>
+          <div className={style.meta_wrapper}>
+            <h3>Number of</h3>
+            <div>
+              <div className={style.label}>Tropical cyclones</div>
+              <div className={style.value_container}>
+                <span className={style.indicator} style={{backgroundColor:'rgba(0, 247, 243, 1)'}}></span>
+                <span className={style.value}>{this.state.current_data.cyclones}</span>
+              </div>
+            </div>
+            <div>
+              <div className={style.label}>Tropical storms</div>
+              <div className={style.value_container}>
+                <span className={style.indicator} style={{backgroundColor:'rgba(254, 142, 0, 1)'}}></span>
+                <span className={style.value}>{this.state.current_data.storms}</span>
+              </div>
+            </div>
+            <div>
+              <div className={style.label}>Hurricanes</div>
+              <div className={style.value_container}>
+                <span className={style.indicator} style={{backgroundColor:'rgba(254, 91, 89, 1)'}}></span>
+                <span className={style.value}>{parseInt(this.state.current_data.hurricanes) + parseInt(this.state.current_data.major_hurricanes)}</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div className={style.chart_container}>
           <canvas id={style.chart} ref={this.chartRef}></canvas>
