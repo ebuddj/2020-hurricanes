@@ -25,8 +25,7 @@ class App extends Component {
     this.state = {
       backgrounds:[],
       current_data:{
-        hurricanes:0,
-        major_hurricanes:0
+        hurricanes:0
       },
       'img_src':'1600px-1990_Atlantic_hurricane_season_summary_map-min.png'
     }
@@ -73,7 +72,7 @@ class App extends Component {
         bar_chart_data.datasets[1].data.push(values.storms);
         bar_chart_data.datasets[1].backgroundColor.push('rgba(254, 142, 0, 0.45)');
 
-        bar_chart_data.datasets[2].data.push(parseInt(values.hurricanes) + parseInt(values.major_hurricanes));
+        bar_chart_data.datasets[2].data.push(parseInt(values.hurricanes));
         bar_chart_data.datasets[2].backgroundColor.push('rgba(254, 91, 89, 0.45)');
       });
       this.setState((state, props) => ({
@@ -214,7 +213,7 @@ class App extends Component {
               <div className={style.label}>Hurricanes</div>
               <div className={style.value_container}>
                 <span className={style.indicator} style={{backgroundColor:'rgba(254, 91, 89, 1)'}}></span>
-                <span className={style.value}>{parseInt(this.state.current_data.hurricanes) + parseInt(this.state.current_data.major_hurricanes)}</span>
+                <span className={style.value}>{parseInt(this.state.current_data.hurricanes)}</span>
               </div>
             </div>
           </div>
