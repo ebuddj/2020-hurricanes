@@ -18,7 +18,8 @@ Hurricane Mitch is the second-deadliest Atlantic hurricane on record, causing ov
 * [Wikipedia](https://en.wikipedia.org/wiki/Atlantic_hurricane_season)
 
 **EBU links**
-* [News Exchange](https://news-exchange.ebu.ch/item_detail/3d20c2012454f889065b356c048e2d92/2020_21035776)
+* [News Exchange](https://news-exchange.ebu.ch/item_detail/3d20c2012454f889065b356c048e2d92/2020_21035776), 2020-08-07
+* [News Exchange](https://news-exchange.ebu.ch/item_detail/323b6e7f997a70b59a061e9b2c611762/2020_21039003), 2020-08-28
 * [Social Newswire](https://www.evnsocialnewswire.ch/data/weather-animation-shows-recorded-tropical-storms-and-hurricanes-in-the-northern-atlantic-between-1990-and-2019/)
 
 **Used by**
